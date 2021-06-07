@@ -1,88 +1,135 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <style>
+      /*
+===========================================================================================================================
+                                                 
+                                                  global.css
+
+===========================================================================================================================
+      */
+
+      body {
+        font-family: helvetica;
+      }
+
+      header {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        background: #172035;
+      }
+
+      img#logo {
+        margin-left: 100px;
+        margin-right: 100px;
+        position: absolute;
+        top: 17px;
+        left: 0;
+      }
+
+      nav {
+        display: inline-block;
+        margin-left: 350px;
+        margin-top: 30px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 2em;
+        font-family: 'helvetica';
+        margin-right: 15px;
+        padding: 30px;
+      }
+
+      a:hover {
+        color: white;
+        background: #09568d;
+        padding: 30px;
+      }
+
+      button {
+        width: 50%;
+        height: 50px;
+        background: #172035;
+        color: white;
+        font-size: 2em;
+        border: none;
+      }
+
+      button:hover {
+        background: #09568d;
+      }
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 2em;
+      }
+    </style>
 
     <title>LearnTech+ | Learn Tech</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="img/logo.png" alt="LearnTech+ Logo" />
 
-    <!-- Start Normalize CSS -->
-  	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="techsupport.html">Tech Support</a>
+        <a href="courses.html">Courses</a>
+        <a href="premiumplus.html">Premium Plus</a>
+        <a href="learntech.html">Learn Tech</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  	<!-- Start Custom CSS -->
-  	<link rel="stylesheet" type="text/css" href="css/learntech.css">
+    <section id="learntech">
+      <center><h1 class="h1lt">Learn Tech</h1></center>
 
-  	<!-- Start Global CSS -->
-  	<link rel="stylesheet" type="text/css" href="css/global.css">
+      <div class="learntechnow">
+        <img src="img/learntechnow.jpg" alt="Learn Tech Now" />
 
+        <center><h2>Learn Tech Now</h2></center>
 
-</head>
-<body>
+        <center><h6>Daily Video Series Covering Tech Topics</h6></center>
 
-  <header>
+        <center><button>Watch Now</button></center>
+      </div>
 
-    <img id="logo" src="img/logo.png" alt="LearnTech+ Logo">
+      <div class="learntechpodcast">
+        <img src="img/learntechpodcast.jpg" />
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="techsupport.html">Tech Support</a>
-      <a href="courses.html">Courses</a>
-      <a href="premiumplus.html">Premium Plus</a>
-      <a href="learntech.html">Learn Tech</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+        <center><h2>Learn Tech Podcast</h2></center>
 
+        <center><h6>Daily Podcast Series Covering Tech Topics.</h6></center>
 
-  </header>
+        <center><button>Listen Now</button></center>
+      </div>
 
-  <section id="learntech">
+      <div class="learntechblog">
+        <img src="img/techtipsblog.jpg" />
 
-    <center><h1 class="h1lt">Learn Tech</h1></center>
+        <center><h2>Tech Tips Blog</h2></center>
 
-    <div class="learntechnow">
+        <center><h6>Daily Blog Covering Tech Topics.</h6></center>
 
-      <img src="img/learntechnow.jpg" alt="Learn Tech Now">
+        <center><button>Read Now</button></center>
+      </div>
+    </section>
 
-      <center><h2>Learn Tech Now</h2></center>
+    <footer>
+      <img id="logo" src="img/logo.png" />
 
-			<center><h6>Daily Video Series Covering Tech Topics</h6></center>
-
-			<center><button>Watch Now</button></center>
-
-    </div>
-
-    <div class="learntechpodcast">
-
-			<img src="img/learntechpodcast.jpg">
-
-			<center><h2>Learn Tech Podcast</h2></center>
-
-			<center><h6>Daily Podcast Series Covering Tech Topics.</h6></center>
-
-			<center><button>Listen Now</button></center>
-
-		</div>
-
-		<div class="learntechblog">
-
-			<img src="img/techtipsblog.jpg">
-
-			<center><h2>Tech Tips Blog</h2></center>
-
-			<center><h6>Daily Blog Covering Tech Topics.</h6></center>
-
-			<center><button>Read Now</button></center>
-
-		</div>
-
-
-  </section>
-
-  <footer>
-
-		<img id="logo" src="img/logo.png">
-
-		<p id="footer">© Copyright 2021. All Rights Reserved. | LearnTech Plus</p>
-
-	</footer>
-
-</body>
+      <p id="footer">© Copyright 2021. All Rights Reserved. | LearnTech Plus</p>
+    </footer>
+  </body>
 </html>
