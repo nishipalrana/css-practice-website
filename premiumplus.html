@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>LearnTech+ | Premium Plus</title>
     <style>
       /*
 ===========================================================================================================================
@@ -394,16 +395,65 @@
 ===========================================================================================================================
       */
 
-         body {
+
+    body {
       font-family: helvetica;
     }
 
     header {
       width: 100%;
-      height: auto;
       min-height: 80px;
+      
       background: #172035;
     }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 1130px) {
+
+      .topnav a:not(:last-child){
+        display: none;
+      }
+
+      .topnav a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 1130px) {
+      
+    
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      #logo{
+       position: absolute;
+       left: 0;
+       top: 20px;
+      }
+
+      .topnav.responsive{
+        margin-top: 75px;
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
 
     a {
       color: white;
@@ -414,18 +464,20 @@
       padding: 30px;
     }
 
-    a:hover {
+    a:hover, a.active{
       color: white;
       background: #09568d;
-      padding: 30px;
+      
     }
 
+
+
     button {
-      width: fit-content;
+      width: 50%;
       height: 50px;
       background: #172035;
       color: white;
-      font-size: 1.3em;
+      font-size: 2em;
       border: none;
     }
 
@@ -435,8 +487,6 @@
 
     h1 {
       font-size: 2em;
-      background: #09568d;
-      color: white;
     }
 
     h3 {
@@ -450,7 +500,7 @@
     footer {
       background: #172035;
       min-height: 80px;
-      justify-content: space-around !important;
+      justify-content: space-between !important;
       padding: 3px;
     }
 
@@ -469,35 +519,39 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    </style>
-    <title>LearnTech+ | Premium Plus</title>
+  </style>
+  <script>
+  
+  function showDropdown() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
-    <!-- Start Normalize CSS -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-
-    <!-- Start Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/premiumplus.css" />
-
-    <!-- Start Global CSS -->
-    <link rel="stylesheet" type="text/css" href="css/global.css" />
+  </script>
+    
   </head>
   <body>
     <header class="flexbox-container">
-      <img
+    <img
         id="logo"
         src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/logo.png"
         alt="LearnTech+ Logo"
       />
 
-      <nav class="flexbox-container">
-        <a href="index.html">Home</a>
-        <a href="techsupport.html">Tech Support</a>
-        <a href="courses.html">Courses</a>
-        <a href="premiumplus.html">Premium Plus</a>
-        <a href="learntech.html">Learn Tech</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <nav class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="techsupport.html">Tech Support</a>
+      <a href="courses.html">Courses</a>
+      <a href="premiumplus.html" class="active">Premium Plus</a>
+      <a href="learntech.html">Learn Tech</a>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="showDropdown()">&#9776;</a>
+    </nav>
+  </header>
 
     <section id="courses">
       <center><h1 id="heading">Premium Plus</h1></center>
