@@ -450,6 +450,16 @@
       background: black;
       text-align: center;
       color: white;
+    }
+
+    div.transistionAbout{
+       transition-property: background-color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+
+    div.transistionAbout:hover {
+      background-color: #172035;
 
     }
 
@@ -499,7 +509,7 @@
     header {
       width: 100%;
       min-height: 80px;
-      
+
       background: #172035;
     }
 
@@ -509,7 +519,7 @@
 
     @media screen and (max-width: 1130px) {
 
-      .topnav a:not(:last-child){
+      .topnav a:not(:last-child) {
         display: none;
       }
 
@@ -522,8 +532,8 @@
     }
 
     @media screen and (max-width: 1130px) {
-      
-    
+
+
       .topnav.responsive a.icon {
         position: absolute;
         right: 0;
@@ -536,13 +546,13 @@
         text-align: left;
       }
 
-      #logo{
-       position: absolute;
-       left: 0;
-       top: 20px;
+      #logo {
+        position: absolute;
+        left: 0;
+        top: 20px;
       }
 
-      .topnav.responsive{
+      .topnav.responsive {
         margin-top: 75px;
         display: block;
         width: 100%;
@@ -560,10 +570,11 @@
       padding: 30px;
     }
 
-    a:hover, a.active{
+    a:hover,
+    a.active {
       color: white;
       background: #09568d;
-      
+
     }
 
 
@@ -617,8 +628,7 @@
     }
   </style>
   <script>
-  
-  function showDropdown() {
+    function showDropdown() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -740,19 +750,19 @@
       <h1>About Learn Tech Plus</h1>
     </div>
     <div class="flexbox-container">
-      <div class="students">
+      <div class="students transistionAbout">
         <h3>Students</h3>
 
         <h1>82,000</h1>
       </div>
 
-      <div class="reviews">
+      <div class="reviews transistionAbout">
         <h3>Reviews</h3>
 
         <h1>1,100</h1>
       </div>
 
-      <div class="courses">
+      <div class="courses transistionAbout">
         <h3>Courses</h3>
 
         <h1>10</h1>
@@ -817,7 +827,7 @@
   </section>
 
   <footer class="flexbox-container">
-    <img 
+    <img
       src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/logo.png""
       alt="LearnTech+ Logo" />
 
