@@ -613,14 +613,16 @@
   }
 }
 
-var modal= document.getElementById("formSuccess");
+var modal= document.getElementById("formSubmit");
 var checkModal = document.getElementById("checkModal");
 var closeBtn=document.getElementByClassName("close")[0];
 
-checkModal.onclick = function (){
+function showModal(){
+  console.log("in showModal");
   modal.style.display = "block";
 }
 closeBtn.onclick = function(){
+  console.log("modal closed");
   modal.style.display = "none";
 }
 
@@ -652,15 +654,17 @@ closeBtn.onclick = function(){
       <a href="javascript:void(0);" class="icon" onclick="showDropdown()">&#9776;</a>
     </nav>
   </header>
-  
-  <form>
-      <div id="formSubmit" class="modal">
+
+  <div id="formSubmit" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Form Submitted Succesfully</p>
   </div>
   </div>
-  
+  <button onclick="showModal()">TEST</button>
+  <form onsubmit="showModal()">
+      
+
     First Name: <br>
     <input type="text" name="firstname" value="">
     <br>
@@ -676,8 +680,6 @@ closeBtn.onclick = function(){
     <br>
     <input type="submit"  name="submit" value="Submit">
     <input type="reset" name="reset" value="Clear Form">
-    <input type="button" id="checkModal" value="Check Modal">
-
   </form>
   
 
