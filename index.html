@@ -521,23 +521,40 @@
   animation-timing-function: ease-in-out;
 }
 
-.tooltip {
+
+
+
+
+    /*
+===========================================================================================================================
+                                                 
+                                                  global.css
+
+===========================================================================================================================
+      */
+
+
+    body {
+      font-family: helvetica;
+    }
+
+    .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: grey;
+  opacity: 0.75;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 110%;
+  top: 115%;
   left: 50%;
   margin-left: -60px;
 }
@@ -550,26 +567,12 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent black transparent;
+  border-color: transparent transparent grey transparent;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
-
-
-    /*
-===========================================================================================================================
-                                                 
-                                                  global.css
-
-===========================================================================================================================
-      */
-
-    body {
-      font-family: helvetica;
-    }
 
     header {
       width: 100%;
@@ -598,6 +601,7 @@
 
     @media screen and (max-width: 1130px) {
 
+      
 
       .topnav.responsive a.icon {
         position: absolute;
@@ -716,11 +720,11 @@
     <nav class="topnav" id="myTopnav">
       <a href="index.html" class="active tooltip">Home<span class="tooltiptext">Home</span></a>
       
-      <a href="techsupport.html">Tech Support</a>
-      <a href="courses.html">Courses</a>
-      <a href="premiumplus.html">Premium Plus</a>
-      <a href="learntech.html">Learn Tech</a>
-      <a href="contact.html">Contact</a>
+      <a href="techsupport.html"class="tooltip">Tech Support<span class="tooltiptext">Tech Support</span></a>
+      <a href="courses.html" class="tooltip">Courses<span class="tooltiptext">Courses</span></a>
+      <a href="premiumplus.html"class="tooltip">Premium Plus<span class="tooltiptext">Premium Plus</span></a>
+      <a href="learntech.html"class="tooltip">Learn Tech<span class="tooltiptext">LearnTech</span></a>
+      <a href="contact.html"class="tooltip">Contact<span class="tooltiptext">Contact</span></a>
       <a href="javascript:void(0);" class="icon" onclick="showDropdown()">&#9776;</a>
     </nav>
   </header>
