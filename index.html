@@ -420,7 +420,7 @@
       margin-bottom: 100px;
       box-shadow: 5px 5px 50px grey;
       opacity: 1;
-      transition: transform 0.8s;
+      transition: transform 0.5s;
       transform-style: preserve-3d;
     }
      .course-front,.course-back {
@@ -503,6 +503,23 @@
       margin-bottom: 100px;
       box-shadow: 5px 5px 50px grey;
     }
+
+  @keyframes textColor {
+  0%   {color: red;transform: rotate(5deg);}
+  25%  {color: yellow; font-size:1.4em; font-weight: bold;}
+  50%  {color: blue; font-size:1.4em; font-weight:bold;}
+  100% {color: green; transform: rotate(-5deg); }
+}
+
+.animateText{
+  text-transform: uppercase;
+  animation-name: textColor;
+  animation-duration: 1.5s; 
+  animation-delay: -1s; /*Negative values give an impression that it is running already*/
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
 
 
 
@@ -714,6 +731,7 @@
               Development wanting to learn HTML5 to get started........
             </h6>
           </center>
+          <center class="animateText">Hover your Mouse here</center>
         </div>
         <div class="course-back focus-item">
           <center>
@@ -750,6 +768,7 @@
             Development wanting to learn CSS3 to get started........
           </h6>
         </center>
+        <center class="animateText">Hover your Mouse here</center>
 
        
       </div>
@@ -785,7 +804,7 @@
             Development wanting to learn JavaScript to get started........
           </h6>
         </center>
-        <center>Hover your Mouse here</center>
+        <center class="animateText">Hover your Mouse here</center>
 
       </div>
        <div class="course-back">
