@@ -421,17 +421,21 @@
       box-shadow: 5px 5px 50px grey;
       transition: transform 0.5s;
       transform-style: preserve-3d;
-     
-    }
-     .course-front,.course-back{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
-        backface-visibility: hidden;
+
     }
 
-    .course:hover,.course-back {
+    .course-front,
+    .course-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+    }
+
+    .course:hover,
+    .course-back {
       transform: rotateY(180deg);
     }
 
@@ -504,26 +508,50 @@
       box-shadow: 5px 5px 50px grey;
     }
 
-  @keyframes textColor {
-  0%   {color: red;}
-  25%  {color: yellow; font-size:1.3em; font-weight: bold;}
-  50%  {color: blue; font-size:1.3em; font-weight:bold;}
-  100% {color: green;}
-}
+    @keyframes textColor {
+      0% {
+        color: red;
+      }
 
-.animateText{
-  text-transform: uppercase;
-  animation-name: textColor;
-  animation-duration: 1.5s; 
-  animation-delay: -1s; /*Negative values give an impression that it is running already*/
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
+      25% {
+        color: yellow;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+
+      50% {
+        color: blue;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+
+      100% {
+        color: green;
+      }
+    }
+
+    .animateText {
+      text-transform: uppercase;
+      animation-name: textColor;
+      animation-duration: 1.5s;
+      animation-delay: -1s;
+      /*Negative values give an impression that it is running already*/
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
 
 
     .mySlides {
-      display: none
+      display: none;
+      background-color: #172035;
+    }
+
+    img.slideImg {
+      margin-top: 20px;
+      width: 50%;
+      position: relative;
+      left: 25%;
     }
 
     img {
@@ -552,12 +580,13 @@
       border-radius: 0 3px 3px 0;
       user-select: none;
     }
+
     .next {
       right: 0;
       border-radius: 3px 0 0 3px;
     }
 
-   
+
     .prev:hover,
     .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
@@ -568,10 +597,11 @@
       color: #f2f2f2;
       font-size: 15px;
       padding: 8px 12px;
-      font-family:inherit;
-      position: absolute;
+      font-family: inherit;
+      position: relative;
+      left: 40%;
       bottom: 8px;
-      width: 100%;
+      width: 20%;
       text-align: center;
     }
 
@@ -627,7 +657,7 @@
       }
     }
 
-     @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: 300px) {
 
       .prev,
       .next,
@@ -652,46 +682,47 @@
     }
 
     .tooltip {
-  position: relative;
-  display: inline-block;
-}
+      position: relative;
+      display: inline-block;
+    }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: grey;
-  opacity: 0.75;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 115%;
-  left: 50%;
-  margin-left: -60px;
-}
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: grey;
+      opacity: 0.75;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 115%;
+      left: 50%;
+      margin-left: -60px;
+    }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent grey transparent;
-}
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent grey transparent;
+    }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
 
     header {
       width: 100%;
       min-height: 80px;
-
       background: #172035;
+      box-shadow: 30px 30px white;
+      z-index: 1;
     }
 
     .topnav .icon {
@@ -714,8 +745,7 @@
 
     @media screen and (max-width: 1130px) {
 
-      
-
+    
       .topnav.responsive a.icon {
         position: absolute;
         right: 0;
@@ -832,34 +862,34 @@
 
     <nav class="topnav" id="myTopnav">
       <a href="index.html" class="active tooltip">Home<span class="tooltiptext">Home</span></a>
-      
-      <a href="techsupport.html"class="tooltip">Tech Support<span class="tooltiptext">Tech Support</span></a>
+
+      <a href="techsupport.html" class="tooltip">Tech Support<span class="tooltiptext">Tech Support</span></a>
       <a href="courses.html" class="tooltip">Courses<span class="tooltiptext">Courses</span></a>
-      <a href="premiumplus.html"class="tooltip">Premium Plus<span class="tooltiptext">Premium Plus</span></a>
-      <a href="learntech.html"class="tooltip">Learn Tech<span class="tooltiptext">LearnTech</span></a>
-      <a href="contact.html"class="tooltip">Contact<span class="tooltiptext">Contact</span></a>
+      <a href="premiumplus.html" class="tooltip">Premium Plus<span class="tooltiptext">Premium Plus</span></a>
+      <a href="learntech.html" class="tooltip">Learn Tech<span class="tooltiptext">LearnTech</span></a>
+      <a href="contact.html" class="tooltip">Contact<span class="tooltiptext">Contact</span></a>
       <a href="javascript:void(0);" class="icon" onclick="showDropdown()">&#9776;</a>
     </nav>
   </header>
 
-  
-   <div class="slideshow-container">
+
+  <div class="slideshow-container">
 
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-01.jpg" style="width:50%; position:relative; left: 25%;">
+      <img src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-01.jpg" class="slideImg">
       <div class="text">Caption Text</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+      <img src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-02.jpg" class="slideImg">
       <div class="text">Caption Two</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+      <img src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-03.jpg" class="slideImg">
       <div class="text">Caption Three</div>
     </div>
 
@@ -875,7 +905,7 @@
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
-   <script>
+  <script>
     var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -926,7 +956,9 @@ function showSlides(n) {
               Development wanting to learn HTML5 to get started........
             </h6>
           </center>
-          <center><h6 class="animateText">Hover your Mouse here</h6></center>
+          <center>
+            <h6 class="animateText">Hover your Mouse here</h6>
+          </center>
         </div>
         <div class="course-back focus-item">
           <center>
@@ -940,84 +972,88 @@ function showSlides(n) {
               <br>
               <br>
               <h6>Did you notice it is the backside of this Card?</h6>
-                <center><button>Learn More</button></center>
+              <center><button>Learn More</button></center>
             </h6>
           </center>
         </div>
       </div>
-      
-      <div class="course focus-item">
-      <div class="course-front">
 
-        <img
+      <div class="course focus-item">
+        <div class="course-front">
+
+          <img
           src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-02.jpg"
         />
 
-        <center>
-          <h2>CSS3 For Beginners</h2>
-        </center>
+          <center>
+            <h2>CSS3 For Beginners</h2>
+          </center>
 
-        <center>
-          <h6>
-            This course was designed for students starting out in Front End Web
-            Development wanting to learn CSS3 to get started........
-          </h6>
-        </center>
-        <center><h6 class="animateText">Hover your Mouse here</h6></center>
+          <center>
+            <h6>
+              This course was designed for students starting out in Front End Web
+              Development wanting to learn CSS3 to get started........
+            </h6>
+          </center>
+          <center>
+            <h6 class="animateText">Hover your Mouse here</h6>
+          </center>
 
-       
-      </div>
-       <div class="course-back">
-         <center>
-          <h2>CSS3 For Beginners</h2>
-        </center>
 
-        <center>
-          <h6>
-            This course was designed for students starting out in Front End Web
-            Development wanting to learn CSS3 to get started........</h6>
+        </div>
+        <div class="course-back">
+          <center>
+            <h2>CSS3 For Beginners</h2>
+          </center>
+
+          <center>
+            <h6>
+              This course was designed for students starting out in Front End Web
+              Development wanting to learn CSS3 to get started........</h6>
             <h6>Did you notice it is the backside of this Card?</h6>
-        </center>
+          </center>
 
-        <center><button>Learn More</button></center>
+          <center><button>Learn More</button></center>
         </div>
-        </div>
+      </div>
 
       <div class="course focus-item">
-         <div class="course-front">
-        <img
+        <div class="course-front">
+          <img
           src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/course-03.jpg"
         />
 
-        <center>
-          <h2>JavaScript For Beginners</h2>
-        </center>
+          <center>
+            <h2>JavaScript For Beginners</h2>
+          </center>
 
-        <center>
-          <h6>
-            This course was designed for students starting out in Front End Web
-            Development wanting to learn JavaScript to get started........
-          </h6>
-        </center>
-        <center><h6 class="animateText">Hover your Mouse here</h6></center>
+          <center>
+            <h6>
+              This course was designed for students starting out in Front End Web
+              Development wanting to learn JavaScript to get started........
+            </h6>
+          </center>
+          <center>
+            <h6 class="animateText">Hover your Mouse here</h6>
+          </center>
 
-      </div>
-       <div class="course-back">
-         <center>
-         <h2>JavaScript For Beginners</h2>
-        </center>
-
-        <center>
-          <h6>
-            This course was designed for students starting out in Front End Web
-            Development wanting to learn JavaScript to get started........
-          </h6>
-            <h6>Did you notice it is the backside of this Card?</h6>
-        </center>
-
-        <center><button>Learn More</button></center>
         </div>
-    </div>
+        <div class="course-back">
+          <center>
+            <h2>JavaScript For Beginners</h2>
+          </center>
+
+          <center>
+            <h6>
+              This course was designed for students starting out in Front End Web
+              Development wanting to learn JavaScript to get started........
+            </h6>
+            <h6>Did you notice it is the backside of this Card?</h6>
+          </center>
+
+          <center><button>Learn More</button></center>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1105,7 +1141,7 @@ function showSlides(n) {
 
   <footer class="flexbox-container">
     <a href="testpage.html">
-    <img
+      <img
       src="https://raw.githubusercontent.com/nishipalrana/css-practice-website/master/img/logo.png"
       alt="LearnTech+ Logo" /></a>
 
